@@ -29,7 +29,7 @@ public class MessageBirdApi
     public String Message { get; set; } // Our Body
     public long PhoneNumber { get; set; } // Recipients
 
-    private String AccessCode = "DnSfA00BxAVs3HS4mX3K4nSJ0"; // Access Code | Can be located in our web.config file
+    private String AccessCode = "<Access Code>"; // Access Code | Can be located in our web.config file
     
     private List<Dictionary<String,Object>> Error_List; // List of errors
 
