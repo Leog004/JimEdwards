@@ -92,17 +92,6 @@ public partial class checkout : System.Web.UI.Page
         }
 
 
-        //string link = "http://google.com";
-
-        //MessageBirdApi messageBirdApi = new MessageBirdApi("Payment", String.Format("Your purhase has been proccessed. Click on the link to view your order! {0}", link), 9562834035);
-
-        //var sendingMessage = messageBirdApi.SendMessageToCustomer();
-
-        //if (sendingMessage)
-        //{
-        //   this.Controls.Add(new LiteralControl("<script>console.log("+ messageBirdApi.getMessageStatus() +")</script>")); 
-        //}
-
     }
 
     private bool noItemsInCart(string cookie)
@@ -308,124 +297,7 @@ public partial class checkout : System.Web.UI.Page
 
 
 
-
-    //public void CreateMessage()
-    //{
-    //    const string YourAccessKey = "DnSfA00BxAVs3HS4mX3K4nSJ0"; // your access key here.
-    //    const long Msisdn = 9562834035; // your phone number here.
-
-    //    MessageBird.Net.ProxyConfigurationInjector.IProxyConfigurationInjector proxyConfigurationInjector = null; // for no web proxies, or web proxies not requiring authentication
-    //    Client client = Client.CreateDefault(YourAccessKey, proxyConfigurationInjector);
-
-    //    try
-    //    {
-    //        MessageBird.Objects.Message message = client.SendMessage("MessageBird", "Tjirp tjirp", new[] { Msisdn });
-    //        this.Controls.Add(new LiteralControl("<script>console.log(" + message + ")</script>"));
-    //    }
-    //    catch (MessageBird.Exceptions.ErrorException e)
-    //    {
-    //        // Either the request fails with error descriptions from the endpoint.
-    //        if (e.HasErrors)
-    //        {
-    //            foreach (MessageBird.Objects.Error error in e.Errors)
-    //            {
-    //                string errorMessage = String.Format("code: {0} description: '{1}' parameter: '{2}'", error.Code, error.Description, error.Parameter);
-    //                this.Controls.Add(new LiteralControl("<script>console.log(" + errorMessage + ")</script>"));
-                    
-    //            }
-    //        }
-    //        // or fails without error information from the endpoint, in which case the reason contains a 'best effort' description.
-    //        if (e.HasReason)
-    //        {
-    //            this.Controls.Add(new LiteralControl("<script>console.log(" + e.Reason + ")</script>"));
-
-    //        }
-    //    }
-
-       
-    //}
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-//protected void getInformation()
-//{
-
-//    string cartId = Access.GetCartID("");
-//    if (!String.IsNullOrEmpty(cartId))
-//    {
-//        DataTable g = Access._G_Cart_ByCartID(cartId);
-//        System.Web.Script.Serialization.JavaScriptSerializer javaScriptSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-
-//        if(g.Rows.Count > 0)
-//        {
-//            Label products = new Label();
-//            for(int x = 0; x < g.Rows.Count; x++)
-//            {
-//                products.Text += "<tr>" +
-//                    "<td>"+g.Rows[x]["Name"].ToString()+"</td>" +
-//                    "<td>" + g.Rows[x]["Price"].ToString() + "</td>" +
-//                    "</tr>";
-//            }
-
-//            SubTotal = String.Format("${0}", g.Rows[0]["ProductTotal"].ToString());
-//            Total = String.Format("${0}", g.Rows[0]["ProductTotal"].ToString());
-
-//            DataTable gTax = Access._G_Tax("TX");
-//            Taxes = String.Format("${0}", Convert.ToDouble(gTax.Rows[0]["Tax"]) * Convert.ToDouble(g.Rows[0]["ProductTotal"]));
-
-//            double productTotal = Convert.ToDouble(g.Rows[0]["ProductTotal"]) + (Convert.ToDouble(gTax.Rows[0]["Tax"]) * Convert.ToDouble(g.Rows[0]["ProductTotal"]));
-
-//            Total = productTotal.ToString();
-
-//            //products_panel.Controls.Add(products);
-//        }
-//    }
-
-
-//}
-//protected void hasBillingInformation()
-//{
-//    if (HttpContext.Current.Request.Cookies["JIM_B_CustomerID"] != null)
-//    {
-//        var cookie = Request.Cookies["JIM_B_CustomerID"].Value;
-//        DataTable g = Access._G_Address_ByCustomerID(cookie);
-//        if (g.Rows.Count > 0)
-//        {
-//            for(int x = 0; x < g.Rows.Count; x++)
-//            { 
-//                if(g.Rows[x]["Type"].ToString() == "Billing")
-//                {
-//                    Name = g.Rows[x]["Name"].ToString();
-//                    //Address = g.Rows[x]["Address"].ToString();
-//                    //City = g.Rows[x]["City"].ToString();
-//                    //State = g.Rows[x]["State"].ToString();
-//                    //Zip = g.Rows[x]["Zip"].ToString();
-//                    //Email = g.Rows[x]["EmailAddress"].ToString();
-
-//                    if (Name.Contains(""))
-//                    {
-//                        //FirstName = Name.Split(' ')[0];
-//                        //LastName = Name.Split(' ')[1];
-//                    }
-
-//                }
-//            }
-//        }
-//    }
-//}
 
 
 
